@@ -3,7 +3,7 @@ const cors = require('cors')
 require('dotenv').config()
 const { Pool } = require('pg')
 const PORT = 3333
-console.log('Rodou esta buceta esse caralho')
+let comunicacao;
 
 function testeNaTela(xpcoin) {
     var pagina = `
@@ -20,7 +20,7 @@ const pool = new Pool({
 const app = express()
 app.use(express.json())
 app.use(cors())
-app.listen(PORT, () => console.log(`Servidor Rodando na Porta ${PORT}`))
+app.listen(PORT, () => {comunicacao = true} )
 app.get('/', (req, res) => { console.log('Olá mundo') })
 
 app.get('/users', async (req, res) => {
