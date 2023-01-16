@@ -3,14 +3,28 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "nodemon": "^2.0.20",
     "pg": "^8.8.0"
   },
   "name": "xpcoin",
   "version": "1.0.0",
   "description": "xpcoin",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LMsousa20/xpcoin-node-js.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/LMsousa20/xpcoin-node-js/issues"
+  },
+  "homepage": "https://github.com/LMsousa20/xpcoin-node-js#readme"
 }
