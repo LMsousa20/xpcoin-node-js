@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 require('dotenv').config()
 const { Pool } = require('pg')
-const PORT = 3333
+const PORT = process.env.PORT || 3001;
 let comunicacao;
 
 function testeNaTela(xpcoin) {
@@ -55,6 +55,3 @@ app.get('/name', async (req,res)=> {
         return res.status(200).send(deu)
 })
 
-// app.get('/:name', async (req,res)=> {
-//     var namqe = req.params;
-//     console.log(namqe.name)})
